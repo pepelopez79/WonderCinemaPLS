@@ -1,0 +1,368 @@
+body {
+    font-family: 'ABeeZee', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white !important;
+    font-weight: bold;
+    font-size: large;
+    margin-right: 5px;
+}
+
+.item-estrenos:hover .nav-link {
+    color: #bcd211 !important;
+}
+
+.item-cartelera:hover .nav-link {
+    color: #3498db !important;
+}
+
+.item-propietario:hover .nav-link {
+    color: #27ae60 !important;
+}
+
+.item-registro:hover .nav-link {
+    color: #e74c3c !important;
+}
+
+.navbar-brand img {
+    max-width: 100px;
+    height: auto;
+    margin-top: 6px;
+}
+
+.logo {
+    max-width: 55%;
+    min-width: 150px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Carrusel */
+#miCarrusel {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-height: 150px;
+    margin: 60px auto 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.carousel-inner {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    object-fit: cover;
+    min-height: 150px;
+}
+
+#slogan {
+    font-family: 'Patua One';
+    position: relative;
+    width: 100%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.299);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 10px;
+    margin-top: -10px;
+    font-size: 2.5vw;
+    z-index: 0;
+}
+
+#slogan h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+/* Secciones */
+section {
+    padding: 30px;
+}
+
+section h2 {
+    position: relative;
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+section h2::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    transition: width 0.3s ease;
+}
+
+.h2-estrenos::before {
+    background-color: #bcd211;
+}
+
+.h2-cartelera::before {
+    background-color: #3498db;
+}
+
+.h2-propietario::before {
+    background-color: #27ae60;
+}
+
+.h2-registro::before {
+    background-color: #e74c3c;
+}
+
+section:hover h2::before {
+    width: 100%;
+}
+
+.row {
+    margin-top: 30px;
+}
+
+.col-content {
+    flex: 1;
+    padding: 5px;
+    min-width: 150px;
+    margin: 10px;
+}
+
+.col-content h3 {
+    color: white;
+    font-weight: bold;
+}
+
+.col-content p {
+    color: white;
+    margin: 0;
+}
+
+.col-content b {
+    color: #bcd211;
+}
+
+.leer-mas {
+    color: #3498dbbe;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.leer-mas:hover {
+    text-decoration: underline;
+}
+
+/* Galería de imágenes */
+.img-fluid {
+    border-radius: 6px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.panel-imagen {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.panel-imagen::before {
+    content: "COMPRAR ENTRADAS O TICKETS";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('images/entrada.png') no-repeat center center;
+    background-size: contain;
+    color: transparent;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.panel-imagen:hover::before {
+    opacity: 1;
+}
+
+.panel-imagen h4 {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+/* Etiquetas de género */
+.etiqueta-genero {
+    position: absolute;
+    top: -1px;
+    left: 25px;
+    margin-top: -100px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid black;
+    border-bottom: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    transform: rotate(90deg);
+    transform-origin: left top;
+}
+
+.etiqueta-genero.etiqueta-accion {
+    background: linear-gradient(90deg, rgb(255, 94, 77), rgb(128, 39, 24));
+}
+
+.etiqueta-genero.etiqueta-drama {
+    background: linear-gradient(90deg, rgb(102, 153, 204), rgb(41, 92, 145));
+}
+
+.etiqueta-genero.etiqueta-fantasia {
+    background: linear-gradient(90deg, rgb(223, 159, 89), rgb(150, 94, 43));
+}
+
+.etiqueta-genero.etiqueta-terror {
+    background: linear-gradient(90deg, rgb(97, 97, 97), rgb(45, 45, 45));
+}
+
+.etiqueta-genero.etiqueta-romantica {
+    background: linear-gradient(90deg, rgb(255, 173, 173), rgb(230, 123, 123));
+}
+
+.etiqueta-genero.etiqueta-comedia {
+    background: linear-gradient(90deg, rgb(147, 112, 219), rgb(87, 56, 138));
+}
+
+/* Formulario de registro */
+#registro {
+    text-align: center;
+    padding: 50px 0;
+}
+
+form {
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.form-content {
+    text-align: left;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    padding: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px;
+}
+
+.btn-primary:hover {
+    background-color: rgb(143, 22, 22)
+}
+
+/* Información del propietario */
+#propietario {
+    text-align: center;
+}
+
+.mapa {
+    height: 300px;
+    max-width: 800px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Mapa */
+.mapa iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 15px;
+}
+
+/* Redes sociales */
+.redes-sociales a {
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.redes-sociales a:hover {
+    color: #27ae60;
+}

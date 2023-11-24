@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/icono.png" type="image/png">
+    <title>Wonder Cinema</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Scripts de Bootstrap y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Sección 1: Página de inicio -->
+<section id="inicio" class="bg-dark text-center text-white">
+    <!-- Navbar con vínculos a secciones -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(39, 39, 39, 0.976)">
+        <a class="navbar-brand" href="#inicio">
+            <img src="images/texto.png" class="texto" alt="WONDER CINEMA">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item item-estrenos">
+                    <a class="nav-link" href="#estrenos">Próximos Estrenos</a>
+                </li>
+                <li class="nav-item item-cartelera">
+                    <a class="nav-link" href="#cartelera">Cartelera</a>
+                </li>
+                <li class="nav-item item-propietario">
+                    <a class="nav-link" href="#propietario">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item item-registro">
+                    <a class="nav-link" href="#registro">Registro</a>
+                </li>
+            </ul>            
+        </div>
+    </nav>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var links = document.querySelectorAll(".navbar-nav a");
+        
+            links.forEach(function (link) {
+                link.addEventListener("click", function () {
+                    var navbarCollapse = document.querySelector(".navbar-collapse");
+                    navbarCollapse.classList.remove("show");
+                });
+            });
+        });
+    </script>
+
+    <div id="miCarrusel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="images/carousel/w.jpg" alt="Imagen Carrusel 1">
+        </div>
+        <div class="carousel-item">
+            <img src="images/carousel/n.jpg" alt="Imagen Carrusel 2">
+        </div>
+        <div class="carousel-item">
+            <img src="images/carousel/ljdh.jpg" alt="Imagen Carrusel 3">
+        </div>
+        <div class="carousel-item">
+            <img src="images/carousel/tm.jpg" alt="Imagen Carrusel 4">
+        </div>
+        </div>
+        <a class="carousel-control-prev" href="#miCarrusel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#miCarrusel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+    <div id="slogan">
+        <h1>Wonder Cinema, donde la magia cobra vida en la pantalla</h1>
+    </div>
+</section>
+
+<!-- Sección 2: Cuatro columnas de contenidos -->
+<section id="estrenos" class="bg-dark">
+    <div class="container">
+        <h2 class="text-center h2-estrenos">Próximos Estrenos</h2>
+        <div class="row">
+            <div class="col-md-4 col-lg-4 col-content">
+                <img src="images/films/ochoapellidosmarroquis.jpg" class="img-fluid" alt="Imagen 1">
+                <h3>OCHO APELLIDOS MARROQUIS</h3>
+                <p>
+                    <b>Fecha Estreno:</b> 2023-12-01<br>
+                    <b>Duración:</b> 97<br>
+                    <b>Genero:</b> Comedia<br>
+                </p>
+                <p class="sinopsis" style="display: none;">
+                    <b>Calificacion:</b> No Recomendada para Menores de 7 años<br>
+                    <b>Director:</b> Álvaro Fernández Armero<br>
+                    <b>Interpretes:</b> Julián López, Michelle Jenner, Elena Irureta<br>
+                    <b>Sinopsis:</b> Carmen (Elena Irureta) quiere cumplir la última voluntad de José María, su marido y patriarca de la familia: recuperar el 'Sardinete', el primer pesquero de su flota, que se encuentra anclado en un puerto marroquí. En su viaje de Cantabria a Marruecos, la acompañarán su hija Begoña (Michelle Jenner) y el ex de esta, Guillermo (Julián López), desesperado por recuperar su amor. Entre choques culturales descubrirán además el gran secreto de José María: Hamida (María Ramos), su otra hija.
+                </p>
+                <a href="#" class="leer-mas">Leer más...</a>
+            </div>
+            
+            <div class="col-md-4 col-lg-4 col-content">
+                <img src="images/films/fivenightsaf.jpg" class="img-fluid" alt="Imagen 2">
+                <h3>FIVE NIGHTS AT FREDDY'S</h3>
+                <p>
+                    <b>Fecha Estreno:</b> 2023-11-01<br>
+                    <b>Duración:</b> 109<br>
+                    <b>Genero:</b> Thriller<br>
+                </p>
+                <p class="sinopsis" style="display: none;">
+                    <b>Calificacion:</b> No Recomendada para Menores de 12 años<br>
+                    <b>Director:</b> Emma Tammi<br>
+                    <b>Interpretes:</b> Jesse McCartney, Kyle Gallner, Haaz Sleiman, Poppy Liu, Bethan Holt, Celeste O'Connor, PJ Byrne, Lonnie Chavis<br>
+                    <b>Sinopsis:</b> Basado en el popular videojuego de terror, un hombre comienza un trabajo como guardia de seguridad nocturno en el restaurante Freddy Fazbear's Pizza, donde descubre que los animatrónicos se mueven por la noche y matan a cualquiera que vean.
+                </p>
+                <a href="#" class="leer-mas">Leer más...</a>
+            </div>
+            
+            <div class="col-md-4 col-lg-4 col-content">
+                <img src="images/films/losjuegosdelhambre.jpg" class="img-fluid" alt="Imagen 3">
+                <h3>LOS JUEGOS DEL HAMBRE</h3>
+                <p>
+                    <b>Fecha Estreno:</b> 2023-11-01<br>
+                    <b>Duración:</b> 158<br>
+                    <b>Genero:</b> Acción<br>
+                </p>
+                <p class="sinopsis" style="display: none;">
+                    <b>Calificacion:</b> No Recomendada para Menores de 12 años<br>
+                    <b>Director:</b> Gary Ross<br>
+                    <b>Interpretes:</b> Tom Blyth, Rachel Zegler, Josh Hutcherson, Peter Dinklage, Jerome Lance, Jason Schwartzman<br>
+                    <b>Sinopsis:</b> La precuela de Los Juegos del Hambre se desarrolla en un Panem postapocalíptico y se remonta varias décadas antes de las vivencias de Katniss Everdeen. Coriolanus Snow es el mentor de Lucy Gray Baird, una niña del empobrecido Distrito 12 seleccionada como tributo. Lucy Gray sorprende a todos con su actuación musical en la ceremonia de inauguración de los Décimos Juegos del Hambre, donde Snow busca aprovechar su talento y encanto para garantizar su supervivencia.
+                </p>
+                <a href="#" class="leer-mas">Leer más...</a>
+            </div>
+            
+            <div class="col-md-4 col-lg-4 col-content">
+                <img src="images/films/napoleon.jpg" class="img-fluid" alt="Imagen 4">
+                <h3>NAPOLEON</h3>
+                <p>
+                    <b>Fecha Estreno:</b> 2023-11-24<br>
+                    <b>Duración:</b> 158<br>
+                    <b>Genero:</b> Biopic<br>
+                </p>
+                <p class="sinopsis" style="display: none;">
+                    <b>Calificacion:</b> No Recomendada para Menores de 16 años<br>
+                    <b>Director:</b> Ridley Scott<br>
+                    <b>Interpretes:</b> Joaquin Phoenix, Vanessa Kirby, Tahar Rahim<br>
+                    <b>Sinopsis:</b> Un retrato original de los orígenes de Napoleón Bonaparte, que fue ascendiendo desde su alistamiento en las fuerzas de la Revolución Francesa como oficial de bajo rango, desmarcándose como un brillante estratega hasta volverse el despiadado emperador de toda Francia. Destacando rápidamente como extraordinario líder y visionario de la guerra, el implacable y ambicioso combatiente entrará en constantes contiendas con el resto de Europa, mientras mantiene también una adictiva y volátil relación con su verdadero amor, su esposa Josefina.
+                </p>
+                <a href="#" class="leer-mas">Leer más...</a>
+            </div>
+            
+            <script>
+                $(document).ready(function () {
+                    $(".leer-mas").click(function (event) {
+                        event.preventDefault();
+                        $(this).prev(".sinopsis").toggle();
+                        var textoBoton = $(this).text();
+                        $(this).text(textoBoton === "Leer más..." ? "Leer menos..." : "Leer más...");
+                    });
+                });
+            </script>
+        </div>
+</section>
+
+<!-- Sección 3: Galería 3x4 de imágenes -->
+<section id="cartelera" class="bg-dark text-white">
+    <div class="container">
+        <h2 class="text-center h2-cartelera">Cartelera</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <a href="images/films/alimanias.jpg" target="_blank" class="panel-imagen">
+                        <div class="etiqueta-genero etiqueta-comedia">COMEDIA</div>
+                        <img src="images/films/alimanias.jpg" class="img-fluid" alt="ALIMAÑAS">
+                        <h4>ALIMAÑAS</h4>
+                    </a>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <a href="images/films/blackfriday.jpg" target="_blank" class="panel-imagen">
+                        <div class="etiqueta-genero etiqueta-terror">TERROR</div>
+                        <img src="images/films/blackfriday.jpg" class="img-fluid" alt="BLACK FRIDAY">
+                        <h4>BLACK FRIDAY</h4>
+                    </a>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <a href="images/films/doraemon.jpg" target="_blank" class="panel-imagen">
+                        <div class="etiqueta-genero etiqueta-fantasia">FANTASIA</div>
+                        <img src="images/films/doraemon.jpg" class="img-fluid" alt="DORAEMON: EL NUEVO DINOSAURIO DE NOBITA">
+                        <h4>DORAEMON: EL NUEVO DINOSAURIO DE NOBITA</h4>
+                    </a>
+                </div>
+        
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <a href="images/films/ellatidodelcielo.jpg" target="_blank" class="panel-imagen">
+                        <div class="etiqueta-genero etiqueta-drama">DRAMA</div>
+                        <img src="images/films/ellatidodelcielo.jpg" class="img-fluid" alt="EL LATIDO DEL CIELO">
+                        <h4>EL LATIDO DEL CIELO</h4>
+                    </a>
+                </div>
+        
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <a href="images/films/wonka.jpg" target="_blank" class="panel-imagen">
+                        <div class="etiqueta-genero etiqueta-fantasia">FANTASIA</div>
+                        <img src="images/films/wonka.jpg" class="img-fluid" alt="WONKA">
+                        <h4>WONKA</h4>
+                    </a>
+                </div>
+        
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <a href="images/films/hipnosis.jpg" target="_blank" class="panel-imagen">
+                        <div class="etiqueta-genero etiqueta-accion">ACCION</div>
+                        <img src="images/films/hipnosis.jpg" class="img-fluid" alt="HIPNOSIS">
+                        <h4>HIPNOSIS</h4>
+                    </a>
+                </div>
+        
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <a href="images/films/rioja.jpg" target="_blank" class="panel-imagen">
+                        <div class="etiqueta-genero etiqueta-drama">DRAMA</div>
+                        <img src="images/films/rioja.jpg" class="img-fluid" alt="RIOJA">
+                        <h4>RIOJA</h4>
+                    </a>
+                </div>
+        
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <a href="images/films/callas.jpg" target="_blank" class="panel-imagen">
+                        <div class="etiqueta-genero etiqueta-romantica">ROMANTICA</div>
+                        <img src="images/films/callas.jpg" class="img-fluid" alt="CALLAS">
+                        <h4>CALLAS</h4>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <a href="images/films/losasesinosdelaluna.jpg" target="_blank" class="panel-imagen">
+                        <div class="etiqueta-genero etiqueta-accion">ACCION</div>
+                        <img src="images/films/losasesinosdelaluna.jpg" class="img-fluid" alt="LOS ASESINOS DE LA LUNA">
+                        <h4>LOS ASESINOS DE LA LUNA</h4>
+                    </a>
+                </div>
+        
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <a href="images/films/trolls3.jpg" target="_blank" class="panel-imagen">
+                        <div class="etiqueta-genero etiqueta-fantasia">FANTASIA</div>
+                        <img src="images/films/trolls3.jpg" class="img-fluid" alt="TROLLS 3">
+                        <h4>TROLLS 3</h4>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <a href="images/films/elfavor.jpg" target="_blank" class="panel-imagen">
+                        <div class="etiqueta-genero etiqueta-comedia">COMEDIA</div>
+                        <img src="images/films/elfavor.jpg" class="img-fluid" alt="EL FAVOR">
+                        <h4>EL FAVOR</h4>
+                    </a>
+                </div>
+        
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <a href="images/films/wishpoderdeseos.jpg" target="_blank" class="panel-imagen">
+                        <div class="etiqueta-genero etiqueta-fantasia">FANTASIA</div>
+                        <img src="images/films/wishpoderdeseos.jpg" class="img-fluid" alt="WISH: EL PODER DE LOS DESEOS">
+                        <h4>WISH: EL PODER DE LOS DESEOS</h4>
+                    </a>
+                </div>
+            </div>
+        </div>        
+</section>
+
+<!-- Sección 4: Información del propietario -->
+<section id="propietario" class="bg-dark text-white">
+    <div class="container">
+        <!-- Información del propietario -->
+        <h2 class="text-center h2-propietario">Sobre Nosotros</h2>
+        <div class="logo text-center">
+            <img src="images/logo.png" alt="Logotipo de la empresa" class="logo">
+        </div>
+        <p class="text-center"><strong>Dirección: </strong>Calle Américo Vespucio, 2, 41092, Sevilla</p>
+        <p class="text-center"><strong>Email: </strong>info@wondercinema.com</p>
+        <!-- Redes sociales -->
+        <div class="redes-sociales text-center">
+            <a href="https://wa.me/123456789" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel:+123456789"><i class="fas fa-phone"></i></a>
+            <a href="mailto:soporte@wondercinema.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="https://t.me/wondercinema" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.facebook.com/wondercinema" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/wondercinema" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/wondercinema" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <!-- Mapa -->
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.6760058572797!2d-6.010270008447463!3d37.39847289754482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126c75cb9a3d89%3A0xabc2f7ce9ac8c427!2sC.%20Am%C3%A9rico%20Vespucio%2C%202%2C%2041092%20Sevilla!5e0!3m2!1ses!2ses!4v1700758162653!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Sección 5: Registro de usuarios -->
+<section id="registro" class="bg-dark">
+    <div class="container">
+        <!-- Sección de Registro de Usuarios -->
+        <h2 class="text-center h2-registro"><b>Registro de Usuarios</b></h2>
+        <form class="form-horizontal" id="registroForm">
+            <div class="form-group">
+                <label for="email" class="control-label"><b>Email:</b></label>
+                <div class="text-field">
+                    <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="control-label"><b>Contraseña:</b></label>
+                <div class="text-field">
+                    <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña">
+                </div>
+            </div>
+
+            <div class="form-group" id="confirmPasswordGroup" style="display: none;">
+                <label for="confirmPassword" class="control-label"><b>Confirmar Contraseña:</b></label>
+                <div class="text-field">
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirme su contraseña">
+                </div>
+            </div>
+
+            <div class="form-group" id="fechaNacimientoGroup" style="display: none;">
+                <label for="fechaNacimiento" class="control-label"><b>Fecha de Nacimiento:</b></label>
+                <div class="text-field">
+                    <input type="date" class="form-control" id="fechaNacimiento">
+                </div>
+            </div>
+
+            <div class="form-group" id="direccionGroup" style="display: none;">
+                <label for="direccion" class="control-label"><b>Dirección:</b></label>
+                <div class="text-field">
+                    <input type="text" class="form-control" id="direccion" placeholder="Ingrese su dirección">
+                </div>
+            </div>
+
+            <div class="form-group" id="codigoPostalGroup" style="display: none;">
+                <label for="codigoPostal" class="control-label"><b>Código Postal:</b></label>
+                <div class="text-field">
+                    <input type="text" class="form-control" id="codigoPostal" placeholder="Ingrese su código postal">
+                </div>
+            </div>
+
+            <div class="form-group" id="ciudadGroup" style="display: none;">
+                <label for="ciudad" class="control-label"><b>Ciudad:</b></label>
+                <div class="text-field">
+                    <input type="text" class="form-control" id="ciudad" placeholder="Ingrese su ciudad">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2">
+                    <button type="button" class="btn btn-primary" id="btnVolver" style="display: none;"><b>Volver</b></button>
+                    <button type="button" class="btn btn-primary" id="btnRegistrar"><b>Registrarse</b></button>
+                    <button type="button" class="btn btn-primary" id="btnIniciarSesion"><b>Iniciar Sesión</b></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        $(document).ready(function() {
+            // Ocultar campos adicionales
+            $("#confirmPasswordGroup").hide();
+            $("#fechaNacimientoGroup").hide();
+            $("#direccionGroup").hide();
+            $("#codigoPostalGroup").hide();
+            $("#ciudadGroup").hide();
+
+            // Mostrar campos adicionales al hacer clic
+            $("#btnRegistrar").click(function() {
+                $("#confirmPasswordGroup").show();
+                $("#fechaNacimientoGroup").show();
+                $("#direccionGroup").show();
+                $("#codigoPostalGroup").show();
+                $("#ciudadGroup").show();
+                $("#btnIniciarSesion").hide();
+                $("#btnVolver").show();
+            });
+
+            // Volver a ocultar campos adicionales
+            $("#btnVolver").click(function() {
+                $("#confirmPasswordGroup").hide();
+                $("#fechaNacimientoGroup").hide();
+                $("#direccionGroup").hide();
+                $("#codigoPostalGroup").hide();
+                $("#ciudadGroup").hide();
+                $("#btnIniciarSesion").show();
+                $("#btnVolver").hide();
+            });
+        });
+    </script>
+</section>
+
+</body>
+</html>
