@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -22,7 +21,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <!-- Sección 1: Página de inicio -->
 <section id="inicio" class="bg-dark text-center text-white">
     <!-- Navbar con vínculos a secciones -->
@@ -50,18 +48,6 @@
             </ul>            
         </div>
     </nav>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var links = document.querySelectorAll(".navbar-nav a");
-        
-            links.forEach(function (link) {
-                link.addEventListener("click", function () {
-                    var navbarCollapse = document.querySelector(".navbar-collapse");
-                    navbarCollapse.classList.remove("show");
-                });
-            });
-        });
-    </script>
 
     <div id="miCarrusel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -72,7 +58,7 @@
             <img src="images/carousel/n.jpg" alt="Imagen Carrusel 2">
         </div>
         <div class="carousel-item">
-            <img src="images/carousel/ljdh.jpg" alt="Imagen Carrusel 3">
+            <img src="images/carousel/ljdh.png" alt="Imagen Carrusel 3">
         </div>
         <div class="carousel-item">
             <img src="images/carousel/tm.jpg" alt="Imagen Carrusel 4">
@@ -164,17 +150,6 @@
                 </p>
                 <a href="#" class="leer-mas">Leer más...</a>
             </div>
-            
-            <script>
-                $(document).ready(function () {
-                    $(".leer-mas").click(function (event) {
-                        event.preventDefault();
-                        $(this).prev(".sinopsis").toggle();
-                        var textoBoton = $(this).text();
-                        $(this).text(textoBoton === "Leer más..." ? "Leer menos..." : "Leer más...");
-                    });
-                });
-            </script>
         </div>
 </section>
 
@@ -193,13 +168,13 @@
                 </div>
                 
                 <div class="col-md-6 col-lg-3 mb-4">
-                    <a href="images/films/blackfriday.jpg" target="_blank" class="panel-imagen">
+                    <a href="detailBF.html" target="_blank" class="panel-imagen">
                         <div class="etiqueta-genero etiqueta-terror">TERROR</div>
                         <img src="images/films/blackfriday.jpg" class="img-fluid" alt="BLACK FRIDAY">
-                        <h4>BLACK FRIDAY</h4>
+                        <h4>BLACK FRIDAY <i class="fas fa-music" style="color: #bcd211;"></i></h4>
                     </a>
-                </div>
-                
+                </div>        
+
                 <div class="col-md-6 col-lg-3 mb-4">
                     <a href="images/films/doraemon.jpg" target="_blank" class="panel-imagen">
                         <div class="etiqueta-genero etiqueta-fantasia">FANTASIA</div>
@@ -217,10 +192,10 @@
                 </div>
         
                 <div class="col-md-6 col-lg-3 mb-4">
-                    <a href="images/films/wonka.jpg" target="_blank" class="panel-imagen">
+                    <a href="detailW.html" target="_blank" class="panel-imagen">
                         <div class="etiqueta-genero etiqueta-fantasia">FANTASIA</div>
                         <img src="images/films/wonka.jpg" class="img-fluid" alt="WONKA">
-                        <h4>WONKA</h4>
+                        <h4>WONKA <i class="fas fa-music" style="color: #bcd211;"></i></h4>
                     </a>
                 </div>
         
@@ -257,10 +232,10 @@
                 </div>
         
                 <div class="col-md-6 col-lg-3 mb-4">
-                    <a href="images/films/trolls3.jpg" target="_blank" class="panel-imagen">
+                    <a href="detailT.html" target="_blank" class="panel-imagen">
                         <div class="etiqueta-genero etiqueta-fantasia">FANTASIA</div>
                         <img src="images/films/trolls3.jpg" class="img-fluid" alt="TROLLS 3">
-                        <h4>TROLLS 3</h4>
+                        <h4>TROLLS 3 <i class="fas fa-music" style="color: #bcd211;"></i></h4>
                     </a>
                 </div>
 
@@ -288,29 +263,18 @@
     <div class="container">
         <!-- Información del propietario -->
         <h2 class="text-center h2-propietario">Sobre Nosotros</h2>
+        <!-- Video -->
+        <div>
+            <video controls autoplay loop muted width="700" class="video">
+                <source src="video.mp4" type="video/mp4">
+            </video>
+        </div> 
         <div class="logo text-center">
-            <img src="images/logo.png" alt="Logotipo de la empresa" class="logo">
-        </div>
-        <p class="text-center"><strong>Dirección: </strong>Calle Américo Vespucio, 2, 41092, Sevilla</p>
-        <p class="text-center"><strong>Email: </strong>info@wondercinema.com</p>
-        <!-- Redes sociales -->
-        <div class="redes-sociales text-center">
-            <a href="https://wa.me/123456789" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="tel:+123456789"><i class="fas fa-phone"></i></a>
-            <a href="mailto:soporte@wondercinema.com" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a href="https://t.me/wondercinema" target="_blank"><i class="fab fa-telegram"></i></a>
-            <a href="https://www.facebook.com/wondercinema" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com/wondercinema" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/wondercinema" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-        <!-- Mapa -->
-        <div class="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.6760058572797!2d-6.010270008447463!3d37.39847289754482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126c75cb9a3d89%3A0xabc2f7ce9ac8c427!2sC.%20Am%C3%A9rico%20Vespucio%2C%202%2C%2041092%20Sevilla!5e0!3m2!1ses!2ses!4v1700758162653!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+            <p class="descripcion">¡Bienvenidos a Wonder Cinema! Aquí encontrarás las películas más divertidas y emocionantes para toda la familia. Desde aventuras en tierras lejanas hasta historias mágicas, cada película te llevará a un mundo de fantasía y diversión. ¡Ven y únete a nosotros en esta aventura llena de sorpresas y alegría!</p>
+            <canvas id="logoCanvas" width="150" height="200"></canvas>
+        </div>       
     </div>
 </section>
-
-
 
 <!-- Sección 5: Registro de usuarios -->
 <section id="registro" class="bg-dark">
@@ -376,39 +340,40 @@
             </div>
         </form>
     </div>
-    <script>
-        $(document).ready(function() {
-            // Ocultar campos adicionales
-            $("#confirmPasswordGroup").hide();
-            $("#fechaNacimientoGroup").hide();
-            $("#direccionGroup").hide();
-            $("#codigoPostalGroup").hide();
-            $("#ciudadGroup").hide();
-
-            // Mostrar campos adicionales al hacer clic
-            $("#btnRegistrar").click(function() {
-                $("#confirmPasswordGroup").show();
-                $("#fechaNacimientoGroup").show();
-                $("#direccionGroup").show();
-                $("#codigoPostalGroup").show();
-                $("#ciudadGroup").show();
-                $("#btnIniciarSesion").hide();
-                $("#btnVolver").show();
-            });
-
-            // Volver a ocultar campos adicionales
-            $("#btnVolver").click(function() {
-                $("#confirmPasswordGroup").hide();
-                $("#fechaNacimientoGroup").hide();
-                $("#direccionGroup").hide();
-                $("#codigoPostalGroup").hide();
-                $("#ciudadGroup").hide();
-                $("#btnIniciarSesion").show();
-                $("#btnVolver").hide();
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </section>
+
+<!-- Botón volver arriba -->
+<a id="volverArriba" href="#" class="volver-arriba"><i class="fas fa-arrow-up"></i></a>
+
+<!-- Footer -->
+<footer class="text-white text-center footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; 2024 Wonder Cinema</p>
+                <p class="text-center"><strong>Dirección: </strong>Calle Américo Vespucio, 2, 41092, Sevilla</p>
+                <p class="text-center"><strong>Email: </strong>info@wondercinema.com</p>
+                <!-- Redes sociales -->
+                <div class="redes-sociales text-center">
+                    <a href="https://wa.me/123456789" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="tel:+123456789"><i class="fas fa-phone"></i></a>
+                    <a href="mailto:soporte@wondercinema.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                    <a href="https://t.me/wondercinema" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://www.facebook.com/wondercinema" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/wondercinema" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/wondercinema" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 text-right">
+                <!-- Mapa -->
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.6760058572797!2d-6.010270008447463!3d37.39847289754482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126c75cb9a3d89%3A0xabc2f7ce9ac8c427!2sC.%20Am%C3%A9rico%20Vespucio%2C%202%2C%2041092%20Sevilla!5e0!3m2!1ses!2ses!4v1700758162653!5m2!1ses!2ses" width="600" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div><br>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
